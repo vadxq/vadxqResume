@@ -1,0 +1,36 @@
+{
+  "name": "vadxqresume",
+  "version": "1.0.0",
+  "description": "前端简历生成",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hi": "./bin/helloworld.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadxq/vadxqResume.git"
+  },
+  "keywords": [
+    "resume",
+    "vadxq"
+  ],
+  "author": "vadxq",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vadxq/vadxqResume/issues"
+  },
+  "homepage": "https://github.com/vadxq/vadxqResume#readme",
+  "dependencies": {
+    "commander": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-latest-node": "^4.0.1"
+  }
+}
