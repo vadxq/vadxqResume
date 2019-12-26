@@ -104,3 +104,10 @@ dist
 .tern-port
 
 package-lock.json
+
+/.nyc_output
+/dist
+/lib
+/tmp
+/yarn.lock
+

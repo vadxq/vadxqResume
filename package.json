@@ -1,38 +1,65 @@
 {
   "name": "vadxqresume",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "前端简历生成",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "vadxq",
   "bin": {
-    "hi": "./bin/helloworld.js",
-    "vresume": "./bin/vresume.js"
+    "vresume": "./bin/run"
+  },
+  "bugs": "https://github.com/vadxq/vadxqResume.git/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.19",
+    "@oclif/config": "^1.13.3",
+    "@oclif/plugin-help": "^2.2.3",
+    "@types/fs-extra": "^8.0.1",
+    "@types/inquirer": "^6.5.0",
+    "inquirer": "^7.0.1",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/node": "^10.17.12",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/vadxq/vadxqResume#readme",
+  "keywords": [
+    "resume",
+    "vadxq",
+    "oclif"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "vresume",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vadxq/vadxqResume.git"
   },
-  "keywords": [
-    "resume",
-    "vadxq"
-  ],
-  "author": "vadxq",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/vadxq/vadxqResume/issues"
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
   },
-  "homepage": "https://github.com/vadxq/vadxqResume#readme",
-  "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "commander": "^4.0.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^10.0.3",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-latest-node": "^4.0.1",
-    "babel-preset-stage-3": "^6.24.1"
-  }
+  "types": "lib/index.d.ts"
 }
