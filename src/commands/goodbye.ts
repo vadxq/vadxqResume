@@ -11,14 +11,14 @@ export class GoodByeCommand extends Command {
       required: false,            // make the arg required with `required: true`
       description: 'output file', // help description
       hidden: true,               // hide this arg from help
-      parse: input => 'output',   // instead of the user input, return a different value
+      // parse: input => 'output',   // instead of the user input, return a different value
       default: 'world',           // default value if no arg input
       options: ['a', 'b'],
     },
   ]
 
   static flags = {
-    stage: flags.string({options: ['development', 'staging', 'production']})
+    stage: flags.string({options: ['development', 'staging', 'production']}),
   }
 
   async run() {
