@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "importHelpers": true,
+    "lib": ["es2017","dom"],
     "module": "commonjs",
-    "outDir": "lib",
-    "rootDir": "src",
+    "target": "es6",
+    "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["actions", "bin", "commands", "utils", "component", "ui"],
+  "exclude": ["node_modules", "e2e", "doc"]
 }
