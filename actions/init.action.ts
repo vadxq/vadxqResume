@@ -82,27 +82,17 @@ function initTpl(data: initData, others: boolean) {
     options.email = gitInfo.email;
   }
 
-  if (others) {
-    optionView(options, (list: KV[]) => {
-      list.forEach((element: KV) => {
-        options[element.key] = element.value;
-      });
-      console.log(options);
-      doDownload(data, options);
-    });
-    return;
-  }
-
   doDownload(data, options);
 }
 
 const doDownload = (data: any, options: any) => {
-  requestUrl(
-    data.username,
-    data.repo,
-    data.branch,
-    data.download as string,
-    data.path as string,
-    options
-  );
+  // use command down
+  // requestUrl(
+  //   data.username,
+  //   data.repo,
+  //   data.branch,
+  //   data.download as string,
+  //   data.path as string,
+  //   options
+  // );
 };
